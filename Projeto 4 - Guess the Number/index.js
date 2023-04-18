@@ -7,7 +7,7 @@ let maxGuesses = 5  //número máximo de tentativas
 
 
 function init() {
-   computerNumber = Math.floor(Math.random() * 100 +1) //o resultado sem o floor sempre será uma fração. O Math.floor arredonda o número. Esses dados serão armazenados dentro de uma variável, no caso a "let computerNumber"
+   computerNumber = Math.floor(Math.random() * 100 + 1) //o resultado sem o floor sempre será uma fração. O Math.floor arredonda o número. Esses dados serão armazenados dentro de uma variável, no caso a "let computerNumber"
     //console.log(computerNumber)
 
 }
@@ -34,25 +34,28 @@ function compareNumbers() {
             document.getElementById('textOutput').innerHTML ='Se liga, seu número está muito baixo. Try again'
             document.getElementById('inputBox').value = ''
             document.getElementById('attempts').innerHTML = attempts
-            attempts++
-    
-        } else {
+            attempts++ 
+        } else{
             document.getElementById('textOutput').innerHTML = 'Parabéns, você acertou. O número correto é: ' + computerNumber
             document.getElementById('attempts').innerHTML = attempts
             attempts++
 
             document.getElementById('inputBox').setAttribute('Readonly', 'Readonly') //desabled o campo quando ganho
         }
+
     } else {
         document.getElementById('textOutput').innerHTML = 'Você perdeu, o número é: ' + computerNumber
         console.log('Número gerado: ' + computerNumber)
         document.getElementById('inputBox').setAttribute('Readonly', 'Readonly') //desabled o campo quando perco
     }
     
-    if(userNumber > computerNumber){
+
+    //consertar isso 
+    if(userNumbers > computerNumber){
         document.getElementById('textOutput').innerHTML = 'Valor inválido. Inicie um novo jogo'
         document.getElementById('inputBox').setAttribute('Readonly', 'Readonly')
-    }
+        
+    } 
     
 }
 

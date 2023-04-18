@@ -27,3 +27,86 @@
     align-items: center;
     margin-bottom: 20px;
 }
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    border: none;
+    flex: 1;
+    outline: none;
+    background: transparent;
+    text-transform: uppercase;
+
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    font-size: 16px;
+    border-radius: 35px;
+    color: #edeef0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{ /*before**/
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+color: #555;
+text-decoration: line-through;
+}
+
+ul li.checked::before{ /*before*/
+    background-image: url(images/checked.png);
+    background-size: 26px;
+    background-repeat: no-repeat;
+    background-color: #ff5945;
+
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 60px;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}

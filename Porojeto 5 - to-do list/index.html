@@ -8,14 +8,21 @@
     <title>To-do List</title>
 </head>
 <body>
-    <!--Script-->
-    <script src="index.js"></script>
 
     <div class="container">
         <div class="todo-app">
             <h2>To-do List</h2>
+            <div class="row">
+                <input type="text" id="inputBox"  placeholder="Crie uma tarefa">
+                <button onclick="addTask()">criar</button>
+            </div>
+            <ul id="listContainer">
+                <li class="checked"></li>
+            </ul>
         </div>
     </div>
     
+    <!--Script-->
+    <script src="index.js"></script>
 </body>
 </html>

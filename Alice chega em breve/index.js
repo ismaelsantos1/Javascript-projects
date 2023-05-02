@@ -18,7 +18,7 @@ let seconds = document.getElementById('seconds')*/
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         /*const*/ nextYear = yyyy + 1,
-        /*const*/ dayMonth = "06/22/",
+        /*const*/ dayMonth = "05/08/",
         /*const*/ comming = dayMonth + yyyy;
 
         today = mm + "/" + dd + "/" + yyyy;
